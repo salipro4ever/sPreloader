@@ -1,7 +1,7 @@
 sPreloader
 ===========
 
-Preload images, even in CSS background. This is custom version of QueryLoader2 by Gaya Design.
+sPreload images, even in CSS background. This is custom version of QueryLoader2 by Gaya Design.
 
 Read the full post here: http://www.gayadesign.com/diy/queryloader2-preload-your-images-with-ease/
 
