@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
+    <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
+
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>Spreloader by salipro4ever</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="inner">
+        <h1>Spreloader</h1>
+        <h2>Preload images, even in CSS background. This is custom version of QueryLoader2 by Gaya Design.</h2>
+        <a href="https://github.com/salipro4ever/sPreloader" class="button"><small>View project on</small>GitHub</a>
+      </div>
+    </header>
+
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h1>
+<a name="spreloader" class="anchor" href="#spreloader"><span class="octicon octicon-link"></span></a>sPreloader</h1>
+
+<p>sPreload images, even in CSS background. This is custom version of QueryLoader2 by Gaya Design.</p>
+
+<p>Read the full post here: <a href="http://www.gayadesign.com/diy/queryloader2-preload-your-images-with-ease/">http://www.gayadesign.com/diy/queryloader2-preload-your-images-with-ease/</a></p>
+
+<h2>
+<a name="how-to-use" class="anchor" href="#how-to-use"><span class="octicon octicon-link"></span></a>How to use</h2>
+
+<p>Include the script in the head section of your webpage.</p>
+
+<pre><code>&lt;script src="path/to/file/jquery.queryloader2.js" type="text/javascript"&gt;&lt;/script&gt;
+</code></pre>
+
+<p>Be sure to add it after you include jQuery.</p>
+
+<p>Now call QueryLoader in a $(document).ready() like this:</p>
+
+<pre><code>$(document).ready(function () {
+    $("body").queryLoader2();
+});
+</code></pre>
+
+<p>For support on iOS devices use the following code:</p>
+
+<pre><code>window.addEventListener('DOMContentLoaded', function() {
+    $("body").queryLoader2();
+});
+</code></pre>
+
+<h2>
+<a name="install-using-bower" class="anchor" href="#install-using-bower"><span class="octicon octicon-link"></span></a>Install using Bower</h2>
+
+<pre><code>bower install queryloader2
+</code></pre>
+
+<h2>
+<a name="basic-usage" class="anchor" href="#basic-usage"><span class="octicon octicon-link"></span></a>Basic usage</h2>
+
+<pre><code>$(selector).queryLoader2(options);
+</code></pre>
+
+<h2>
+<a name="options" class="anchor" href="#options"><span class="octicon octicon-link"></span></a>Options</h2>
+
+<p><strong>backgroundColor</strong></p>
+
+<p>(string) background color of the loader (in hex).
+Default: "#000"</p>
+
+<p><strong>barColor</strong></p>
+
+<p>(string) background color of the bar (in hex).
+Default: "#FFF"</p>
+
+<p><strong>barHeight</strong></p>
+
+<p>(int) Height of the bar in pixels.
+Default: 1</p>
+
+<p><strong>completeAnimation</strong></p>
+
+<p>(string) set the animation type at the end. Options: "grow" or "fade".
+Default: "fade"</p>
+
+<p><strong>minimumTime</strong></p>
+
+<p>(int) time in miliseconds which the loading has to run. If time has not passed the animation will still show.
+Default: 500</p>
+
+<p><strong>deepSearch</strong></p>
+
+<p>(boolean) set to true to find ALL images with the selected elements. If you don't want queryLoader to look in the children, set to false.
+Default: true</p>
+
+<p><strong>percentage</strong></p>
+
+<p>(boolean) Set to true to enable percentage visualising.
+Default: false</p>
+
+<p><strong>onComplete</strong></p>
+
+<p>(function) this function is called once the loading and animation are completed.
+Default: none</p>
+
+<p><strong>onLoadComplete</strong></p>
+
+<p>(function) this function is called once the loading is completed, before the ending animation.
+Default: none</p>
+
+<h2>
+<a name="salipro-custom" class="anchor" href="#salipro-custom"><span class="octicon octicon-link"></span></a>Salipro Custom</h2>
+
+<p>I added some options to enhance customize.</p>
+
+<p><strong>hideOverlay</strong></p>
+
+<blockquote>
+<p>type: boolean, default: false</p>
+</blockquote>
+
+<p>Set <code>true</code> if you want to hide default-overlay of QueryLoad2</p>
+
+<p><strong>customOverlay</strong></p>
+
+<blockquote>
+<p>type: object, default: {}</p>
+</blockquote>
+
+<p>You had a overlay element, if you want QueryLoad2 to use it, plz leave id:</p>
+
+<pre><code>customOverlay: {
+     overlayId: 'preloader'
+}
+</code></pre>
+
+<p>Override CSS of element with object like jQuery</p>
+
+<pre><code>customOverlay: {
+     overlayStyle: { top: '10%', left: '50%',... },
+     barStyle: {...},
+     percentageStyle: {...}
+}
+</code></pre>
+
+<h2>
+<a name="thanks-to" class="anchor" href="#thanks-to"><span class="octicon octicon-link"></span></a>Thanks to</h2>
+
+<p>QueryLoader2 by Gaya</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/salipro4ever/sPreloader/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/salipro4ever/sPreloader/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/salipro4ever/sPreloader"></a> is maintained by <a href="https://github.com/salipro4ever">salipro4ever</a>.</p>
+
+          <p>This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the Architect theme by <a href="https://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
+    </div>
+
+  
+  </body>
+</html>
